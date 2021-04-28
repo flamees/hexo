@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <title>手把手教你发行ERC20代币</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="manifest" href="/site.webmanifest">
+
+        
+    
+    <link rel='stylesheet' href="/./css/dracula.css">
+
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body>
+        <header class="al_header al_pos_fixed">
+    <div class="al_header_container dis_flex_jcenter">
+        <div class="al_header_container_left">
+            <div class="al_header_site_title">
+                <a href="/">手把手教你学区块链</a>
+            </div>
+        </div>
+
+        <div class="dis_flex_jcenter">
+            <div class="al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-menu"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="al_sidebar">
+
+    <div class="al_sidebar_overlay al_full_cover"></div>
+
+    <div class="al_pos_fixed al_sidebar_cnt">
+        <div class="dis_flex_acenter al_sidebar_header">
+            <h3>手把手教你学区块链</h3>
+            <div class="al_sidebar_close al_header_setting">
+                <svg class="al_header_icon">
+                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-close"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="al_sidebar_author_cnt">
+
+            <div class="al_sidebar_author_info">
+                <h4>Bug设计师</h4>
+
+                <p></p>
+            </div>
+
+            
+                <div class="al_sidebar_contact_info">
+                    <p>唯一联系QQ：2510472590</p>
+
+                    <div class="dis_flex al_sidebar_social_widget">
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+        
+    <div class="dis_flex_center al_lightbox_cnt al_full_cover">
+        <img class="al_lightbox_img"/>
+    </div>
+    <div class="al_page_background dis_flex_center al_full_cover"></div>
+    <div class="al_page_container">
+        <div class="al_pos_ab al_fake_background"></div>
+        <div class="al_main_container al_shadow al_main_page_container">
+            <article class="al_article">
+                <header>
+                    <h1 class="al_page_title">
+                        手把手教你发行ERC20代币
+                    </h1>
+                    <div class="al_page_info dis_flex">
+                        <div class="al_page_content_info">
+                            Wed April 28, 2021 04:12 PM
+                        </div>
+
+                        
+
+                        
+                        <span class="tags"></span>
+                    </div>
+                </header>
+
+                
+                    <div class="al_page_content_outline">
+                        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85%E7%8E%AF%E5%A2%83"><span class="toc-text">一、安装环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%9C%A8chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%89%E8%A3%85MetaMask%E6%8F%92%E4%BB%B6"><span class="toc-text">1、在chrome浏览器安装MetaMask插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6"><span class="toc-text">2、安装插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%96%B0%E5%BB%BA%E9%92%B1%E5%8C%85"><span class="toc-text">3、新建钱包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E8%BD%AC%E5%85%A5%E4%B8%80%E4%BA%9BETH"><span class="toc-text">4、转入一些ETH</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%8F%91%E5%B8%83%E5%90%88%E7%BA%A6"><span class="toc-text">二、发布合约</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%90%88%E7%BA%A6%E6%A8%A1%E7%89%88"><span class="toc-text">1、合约模版</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E8%BF%9B%E5%85%A5%E7%BC%96%E8%BE%91%E7%BD%91%E7%AB%99"><span class="toc-text">2、进入编辑网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%8F%90%E4%BA%A4%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6"><span class="toc-text">3、提交智能合约</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%AA%8C%E8%AF%81"><span class="toc-text">三、验证</span></a></li></ol>
+                    </div>
+                
+
+                
+                <section id="post-body">
+                    <h1 id="一、安装环境"><a href="#一、安装环境" class="headerlink" title="一、安装环境"></a>一、安装环境</h1><h2 id="1、在chrome浏览器安装MetaMask插件"><a href="#1、在chrome浏览器安装MetaMask插件" class="headerlink" title="1、在chrome浏览器安装MetaMask插件"></a>1、在chrome浏览器安装<a target="_blank" rel="noopener" href="https://metamask.io/">MetaMask</a>插件</h2><h2 id="2、安装插件"><a href="#2、安装插件" class="headerlink" title="2、安装插件"></a>2、安装插件</h2><p>安装方法，下载后解压，在浏览器输入chrome://extensions/，将安装文件拖拽进浏览器，即可安装</p>
+<h2 id="3、新建钱包"><a href="#3、新建钱包" class="headerlink" title="3、新建钱包"></a>3、新建钱包</h2><p>输入密码，保存助记词</p>
+<h2 id="4、转入一些ETH"><a href="#4、转入一些ETH" class="headerlink" title="4、转入一些ETH"></a>4、转入一些ETH</h2><h1 id="二、发布合约"><a href="#二、发布合约" class="headerlink" title="二、发布合约"></a>二、发布合约</h1><p>由于以太坊智能合约使用的是Solidity语言，所以需要使用Solidity开发。</p>
+<p>进入到<a target="_blank" rel="noopener" href="https://www.myetherwallet.com/">这个网站</a>进行合约发布</p>
+<p><img src="https://img-blog.csdnimg.cn/20191221132129885.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pnc2R6Y3po,size_16,color_FFFFFF,t_70"></p>
+<p> </p>
+<p>在此是需要已经安装Chrome插件的</p>
+<p><img src="https://img-blog.csdnimg.cn/20191221132152574.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pnc2R6Y3po,size_16,color_FFFFFF,t_70"></p>
+<h2 id="1、合约模版"><a href="#1、合约模版" class="headerlink" title="1、合约模版"></a>1、合约模版</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">pragma solidity ^0.4.16;</span><br><span class="line"></span><br><span class="line">interface tokenRecipient &#123; function receiveApproval(address _from, uint256 _value, address _token, bytes _extraData) public; &#125;</span><br><span class="line"></span><br><span class="line">contract TokenERC20 &#123;</span><br><span class="line">string public name;</span><br><span class="line">string public symbol;</span><br><span class="line">uint8 public decimals &#x3D; 18;  &#x2F;&#x2F; 18 是建议的默认值</span><br><span class="line">uint256 public totalSupply;</span><br><span class="line"></span><br><span class="line">    mapping (address &#x3D;&gt; uint256) public balanceOf;  &#x2F;&#x2F;</span><br><span class="line">    mapping (address &#x3D;&gt; mapping (address &#x3D;&gt; uint256)) public allowance;</span><br><span class="line"> </span><br><span class="line">    event Transfer(address indexed from, address indexed to, uint256 value);</span><br><span class="line">    event Approval(address indexed owner, address indexed spender, uint256 value);</span><br><span class="line">    event Burn(address indexed from, uint256 value);</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    function TokenERC20(uint256 initialSupply, string tokenName, string tokenSymbol) public &#123;</span><br><span class="line">        totalSupply &#x3D; initialSupply * 10 ** uint256(decimals);</span><br><span class="line">        balanceOf[msg.sender] &#x3D; totalSupply;</span><br><span class="line">        name &#x3D; tokenName;</span><br><span class="line">        symbol &#x3D; tokenSymbol;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    function _transfer(address _from, address _to, uint _value) internal &#123;</span><br><span class="line">        require(_to !&#x3D; 0x0);</span><br><span class="line">        require(balanceOf[_from] &gt;&#x3D; _value);</span><br><span class="line">        require(balanceOf[_to] + _value &gt; balanceOf[_to]);</span><br><span class="line">        uint previousBalances &#x3D; balanceOf[_from] + balanceOf[_to];</span><br><span class="line">        balanceOf[_from] -&#x3D; _value;</span><br><span class="line">        balanceOf[_to] +&#x3D; _value;</span><br><span class="line">        Transfer(_from, _to, _value);</span><br><span class="line">        assert(balanceOf[_from] + balanceOf[_to] &#x3D;&#x3D; previousBalances);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    function transfer(address _to, uint256 _value) public returns (bool) &#123;</span><br><span class="line">        _transfer(msg.sender, _to, _value);</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) &#123;</span><br><span class="line">        require(_value &lt;&#x3D; allowance[_from][msg.sender]);     &#x2F;&#x2F; Check allowance</span><br><span class="line">        allowance[_from][msg.sender] -&#x3D; _value;</span><br><span class="line">        _transfer(_from, _to, _value);</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    function approve(address _spender, uint256 _value) public</span><br><span class="line">        returns (bool success) &#123;</span><br><span class="line">        allowance[msg.sender][_spender] &#x3D; _value;</span><br><span class="line">        Approval(msg.sender, _spender, _value);</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    function approveAndCall(address _spender, uint256 _value, bytes _extraData) public returns (bool success) &#123;</span><br><span class="line">        tokenRecipient spender &#x3D; tokenRecipient(_spender);</span><br><span class="line">        if (approve(_spender, _value)) &#123;</span><br><span class="line">            spender.receiveApproval(msg.sender, _value, this, _extraData);</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    function burn(uint256 _value) public returns (bool success) &#123;</span><br><span class="line">        require(balanceOf[msg.sender] &gt;&#x3D; _value);</span><br><span class="line">        balanceOf[msg.sender] -&#x3D; _value;</span><br><span class="line">        totalSupply -&#x3D; _value;</span><br><span class="line">        Burn(msg.sender, _value);</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    function burnFrom(address _from, uint256 _value) public returns (bool success) &#123;</span><br><span class="line">        require(balanceOf[_from] &gt;&#x3D; _value);</span><br><span class="line">        require(_value &lt;&#x3D; allowance[_from][msg.sender]);</span><br><span class="line">        balanceOf[_from] -&#x3D; _value;</span><br><span class="line">        allowance[_from][msg.sender] -&#x3D; _value;</span><br><span class="line">        totalSupply -&#x3D; _value;</span><br><span class="line">        Burn(_from, _value);</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2、进入编辑网站"><a href="#2、进入编辑网站" class="headerlink" title="2、进入编辑网站"></a>2、进入<a target="_blank" rel="noopener" href="https://remix.ethereum.org/">编辑网站</a></h2><p>代码不需要修改<br><img src="https://img-blog.csdnimg.cn/20191221132458447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pnc2R6Y3po,size_16,color_FFFFFF,t_70"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191221132709351.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pnc2R6Y3po,size_16,color_FFFFFF,t_70"></p>
+<p><img src="https://img-blog.csdnimg.cn/20191221132745780.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pnc2R6Y3po,size_16,color_FFFFFF,t_70"><br><img src="https://img-blog.csdnimg.cn/20191221132852993.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pnc2R6Y3po,size_16,color_FFFFFF,t_70"><br>点击“Create”按钮</p>
+<h2 id="3、提交智能合约"><a href="#3、提交智能合约" class="headerlink" title="3、提交智能合约"></a>3、提交智能合约</h2><p>点击“Create”后，就可以看到MetaMask弹出的“CONFIRM TRANSACTION”的页面，这个页面是用来确认发送的，点击“CONFIRM”确认提交。</p>
+<p>点击刚刚发布的智能合约地址，就会调转到Etherscan（以太坊的区块浏览器），耐性等待智能合约的创建。</p>
+<p>点击确认，支付成功后，然后他会自动部署合约，等一会，去区块浏览器查你的ETH主账号的事物：地址为：<a target="_blank" rel="noopener" href="https://etherscan.io/address/%EF%BC%88%E5%8A%A0%E4%B8%8A%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E6%94%AF%E4%BB%98%E7%9F%BF%E5%B7%A5%E8%B4%B9%E7%94%A8%E7%9A%84ETH%E8%B4%A6%E5%8F%B7%E5%9C%B0%E5%9D%80%EF%BC%89">https://etherscan.io/address/（加上你自己的支付矿工费用的ETH账号地址）</a></p>
+<p>下图则为你的代币地址，然后查看代币的具体信息：地址为：<br><a target="_blank" rel="noopener" href="https://etherscan.io/token/%EF%BC%88%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BB%A3%E5%B8%81%E5%9C%B0%E5%9D%80%EF%BC%89">https://etherscan.io/token/（你自己的代币地址）</a></p>
+<h1 id="三、验证"><a href="#三、验证" class="headerlink" title="三、验证"></a>三、验证</h1><p>打开MetaMask插件，点击add token，在token address中输入token地址</p>
+<p>显示的正是刚刚创建的Token，也就是ZZZ，余额为1，这说明ERC20 Token发布成功了！</p>
+<p><font color="red" size=5>有任何问题请联系QQ: 2510472590</font></p>
+
+                </section>
+
+                
+                
+                
+
+            </article>
+
+            
+            <nav class="dis_flex al_post_nav">
+                <a class="al_post_nav_item dis_flex_acenter" href="/2021/04/28/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%9C%A8HECO%E4%B8%BB%E9%93%BE%E4%B8%8A%E5%8F%91%E5%B8%81-%E4%B8%8A%E5%B8%81-HECO%E5%8F%91%E5%B8%81-HECO%E4%B8%8A%E5%B8%81/">
+                    
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
+                        </svg>
+                        <span class="al_text_ellipsis al_post_nav_desc">手把手教你在HECO主链上发币|上币|HECO发币|HECO上币</span>
+                    
+                </a>
+                <a class="al_post_nav_item dis_flex_acenter" href="/">
+                    
+                </a>
+            </nav>
+        </div>
+    </div>
+
+
+        <div class="al_index_footer dis_flex_center">
+    <div class="al_index_footer_item al_index_footer_title">
+        Bug设计师
+    </div>
+
+    
+    
+        <div class="al_index_footer_item" onclick="window.open('http://www.beian.miit.gov.cn')")>
+            Fill IPCLicense
+        </div>
+    
+
+    <div class="al_index_footer_item al_index_footer_extra">
+        Created By 
+        <a target="_blank" rel="noopener" href="https://github.com/iGuan7u/Acetolog">AcetoLog</a>
+         · Power By 
+        <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+    </div>
+
+    <div class="al_index_footer_item al_index_footer_extra_right">
+        All Right Reserved
+    </div>
+</div>
+
+        <script type="text/javascript" async="async" src="/javascripts/acelog.js"></script>
+        
+        
+        
+        
+    </body>
+</html>
+        
